@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadi BC - Home Inter</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #F3F4F6; 
+        }
+        .bg-pwa-purple { background-color: #A855F7; }
+        .text-pwa-purple { color: #A855F7; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="pb-32">
+
+    <nav class="bg-white px-4 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-gray-100">
+        <button id="guardiaBtn" data-dropdown-toggle="dropdownGuardia" aria-label="Contactos de la Guardia">
+            <i class="fa-solid fa-shield-quartered text-4xl color-purple"></i>
+        </button>
+        <div id="dropdownGuardia" class="z-10 hidden bg-white p-6 rounded-[2.5rem] shadow-2xl w-72 border border-gray-50">
+             <ul class="py-3 text-sm ">
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Llamar a la guardia del barrio">0800-GUARDIA</a>
+                </li>
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Comunicarme por whatsapp">WhatsApp</a>
+                </li>
+                
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Enviar un mail a la guardia">administracion@gmail.com</a>
+                </li>
+            </ul>
+            <hr class="border-gray-100">
+            <p class="text-xs text-gray-500 p-4 leading-relaxed text-center ">Horario tel: 6hs a 23hs<br>WhatsApp 24hs</p>
+        </div>
+
+        <button id="loteBtn" data-dropdown-toggle="dropdownLote" class="bg-pwa-purple  px-6 py-2.5 rounded-full font-black text-white flex items-center gap-2 text-sm tracking-tight">
+            LT128
+            <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i>
+        </button>
+        <div id="dropdownLote" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-3xl shadow-2xl w-40 overflow-hidden border border-gray-50">
+            <ul class="py-2 text-sm font-bold">
+                <li class="px-5 py-3 hover:bg-gray-50 text-gray-400">LOT127</li>
+                <li class="px-5 py-3 bg-pwa-purple text-white">LT128</li>
+                <li class="px-5 py-3 hover:bg-gray-50 text-gray-400">LOT129</li>
+            </ul>
+        </div>
+
+        <button id="userBtn" data-dropdown-toggle="dropdownUser" class=" flex items-center justify-center" aria-label="Información del usuario">
+            <i class="fa-solid fa-user-circle text-4xl color-purple"></i>
+        </button>
+        <div id="dropdownUser" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-[2.5rem] shadow-2xl w-60 p-2 border border-gray-50">
+            <ul class="py-3 text-sm ">
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#">Datos personales</a>
+                </li>
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#">Cambiar contraseña</a>
+                </li>
+                <li class="px-6 py-3 text-red-500 mt-2 border-t border-gray-100 pt-4 rounded-b-2xl">Cerrar sesión</li>
+            </ul>
+        </div>
+    </nav>
+
+<main class="p-4 space-y-6 max-w-md mx-auto pt-[30px] pb-32">
+    
+    <div class="px-2">
+        <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Votaciones</h1>
+        <p class="text-[10px] text-gray-400 font-bold mt-1 uppercase tracking-widest">Participación Ciudadana</p>
+    </div>
+
+    <div id="accordion-votaciones" data-accordion="collapse" class="space-y-4">
+        
+        <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden border-2 border-transparent">
+            <h2 id="heading-vote-1">
+                <button type="button" class="flex items-center justify-between w-full p-6 text-left" data-accordion-target="#body-vote-1" aria-expanded="false">
+                    <div class="flex items-center gap-4">
+                        <div class="w-2.5 h-2.5 bg-pwa-purple rounded-full shrink-0"></div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-green-100 text-green-600 text-[8px] font-black uppercase px-2 py-0.5 rounded">Activa</span>
+                                <span class="text-[9px] font-black text-pwa-purple uppercase">Cierra en 2 días</span>
+                            </div>
+                            <p class="font-bold text-sm text-gray-900">Color de pintura para el Club House</p>
+                        </div>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs text-gray-300"></i>
+                </button>
+            </h2>
+            <div id="body-vote-1" class="hidden" aria-labelledby="heading-vote-1">
+                <div class="p-6 pt-0 border-t border-gray-50 mt-2">
+                    <p class="text-xs text-gray-500 mb-4 leading-relaxed italic">Seleccione una opción para enviar su voto. Esta acción no puede deshacerse.</p>
+                    
+                    <form class="space-y-3">
+                        <label class="flex items-center p-4 bg-gray-50 rounded-2xl cursor-pointer border border-transparent hover:border-purple-100 transition-all">
+                            <input type="radio" name="color" value="beige" class="w-4 h-4 text-pwa-purple bg-white border-gray-300 focus:ring-pwa-purple focus:ring-2">
+                            <span class="ml-3 text-sm font-bold text-gray-700">Beige Arena</span>
+                        </label>
+                        <label class="flex items-center p-4 bg-gray-50 rounded-2xl cursor-pointer border border-transparent hover:border-purple-100 transition-all">
+                            <input type="radio" name="color" value="gris" class="w-4 h-4 text-pwa-purple bg-white border-gray-300 focus:ring-pwa-purple focus:ring-2">
+                            <span class="ml-3 text-sm font-bold text-gray-700">Gris Cemento</span>
+                        </label>
+                        <label class="flex items-center p-4 bg-gray-50 rounded-2xl cursor-pointer border border-transparent hover:border-purple-100 transition-all">
+                            <input type="radio" name="color" value="blanco" class="w-4 h-4 text-pwa-purple bg-white border-gray-300 focus:ring-pwa-purple focus:ring-2">
+                            <span class="ml-3 text-sm font-bold text-gray-700">Blanco Tiza</span>
+                        </label>
+
+                        <button type="submit" class="w-full bg-pwa-purple text-white py-4 rounded-2xl text-[11px] font-black uppercase tracking-widest mt-4 shadow-lg shadow-purple-50">
+                            Enviar Voto
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden border-2 border-transparent opacity-90">
+            <h2 id="heading-vote-2">
+                <button type="button" class="flex items-center justify-between w-full p-6 text-left" data-accordion-target="#body-vote-2" aria-expanded="false">
+                    <div class="flex items-center gap-4">
+                        <div class="w-2.5 h-2.5 bg-transparent border border-gray-200 rounded-full shrink-0"></div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-gray-100 text-gray-400 text-[8px] font-black uppercase px-2 py-0.5 rounded">Finalizada</span>
+                                <span class="text-[9px] font-black text-gray-400 uppercase">Enero 2026</span>
+                            </div>
+                            <p class="font-bold text-sm text-gray-800">Recambio de luminarias LED</p>
+                        </div>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs text-gray-300"></i>
+                </button>
+            </h2>
+            <div id="body-vote-2" class="hidden" aria-labelledby="heading-vote-2">
+                <div class="p-6 pt-0 border-t border-gray-50 mt-2 space-y-5">
+                    
+                    <p class="text-[10px] font-black text-pwa-purple uppercase tracking-tight">Tu elección: A favor</p>
+
+                    <div class="space-y-4">
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-tighter">
+                                <span class="text-gray-700">A favor</span>
+                                <span class="text-pwa-purple">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-pwa-purple h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-tighter">
+                                <span class="text-gray-700">En contra</span>
+                                <span class="text-gray-400">25%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-gray-300 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-4 rounded-2xl text-center">
+                        <p class="text-[10px] text-gray-400 font-bold">Votación cerrada por la administración el 15/01/2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+
+
+      <nav class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md border-t border-gray-100 h-24 px-4 flex justify-between items-center z-50">
+        
+        <button class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Novedades">
+            <i class="fa-solid fa-newspaper text-2xl"></i>
+        </button>
+
+        <button onclick="navigateTo('mi_unidad.html')" class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Mi Unidad">
+            <i class="fa-solid fa-house-user text-2xl"></i>
+        </button>
+
+        <button onclick="navigateTo('mis_reservas.html')"class="flex flex-col items-center justify-center w-full  text-gray-300" aria-label="Ir a Mis Reservas">
+            <i class="fa-solid fa-calendar text-2xl"></i>
+        </button>
+
+        <button  onclick="navigateTo('comunicaciones.html')"class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Comunicaciones">
+            <i class="fa-solid fa-mailbox text-2xl"></i>
+        </button>
+
+        <button id="moreBtn" data-dropdown-toggle="dropdownMore" class="flex flex-col items-center justify-center w-full text-pwa-purple"  aria-label="Ver más opciones">
+            <i class="fa-solid fa-circle-ellipsis text-2xl"></i>
+        </button>
+
+        <div id="dropdownMore" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-[3rem] shadow-2xl w-64 mb-8 border border-gray-50 p-3">
+            <ul class="py-4 text-sm font-bold text-gray-700">
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="votaciones.html" aria-label="Votaciones">Votaciones</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="reclamos.html" aria-label="Reclamos">Reclamos</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl border-t border-gray-50 mt-2 pt-4">
+                    <a href="documentacion.html" aria-label="Documentación">Documentación</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="faqs.html"  aria-label="Preguntas frecuentas">Preguntas frecuentes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Dispara la entrada suave apenas carga el DOM
+        setTimeout(() => {
+            document.body.classList.add("page-loaded");
+        }, 50); // Un delay mínimo para asegurar que el renderizado empezó
+    });
+
+    // Función universal para salir de la página con suavidad
+    function navigateTo(url) {
+        document.body.classList.remove("page-loaded");
+        document.body.style.opacity = "0";
+        document.body.style.transform = "translateY(-10px)";
+        
+        setTimeout(() => {
+            window.location.href = url;
+        }, 500); // 500ms coincide con el tiempo de la transición CSS
+    }
+</script>
+
+
+</body>
+</html>

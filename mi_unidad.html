@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadi BC - Home Inter</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #F3F4F6; 
+        }
+        .bg-pwa-purple { background-color: #A855F7; }
+        .text-pwa-purple { color: #A855F7; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="pb-32">
+
+     <nav class="bg-white px-4 py-4 flex justify-between items-center sticky top-0 z-50 border-b border-gray-100">
+        <button id="guardiaBtn" data-dropdown-toggle="dropdownGuardia" aria-label="Contactos de la Guardia">
+            <i class="fa-solid fa-shield-quartered text-4xl color-purple"></i>
+        </button>
+        <div id="dropdownGuardia" class="z-10 hidden bg-white p-6 rounded-[2.5rem] shadow-2xl w-72 border border-gray-50">
+             <ul class="py-3 text-sm ">
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Llamar a la guardia del barrio">0800-GUARDIA</a>
+                </li>
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Comunicarme por whatsapp">WhatsApp</a>
+                </li>
+                
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#" aria-label="Enviar un mail a la guardia">administracion@gmail.com</a>
+                </li>
+            </ul>
+            <hr class="border-gray-100">
+            <p class="text-xs text-gray-500 p-4 leading-relaxed text-center ">Horario tel: 6hs a 23hs<br>WhatsApp 24hs</p>
+        </div>
+
+        <button id="loteBtn" data-dropdown-toggle="dropdownLote" class="bg-pwa-purple  px-6 py-2.5 rounded-full font-black text-white flex items-center gap-2 text-sm tracking-tight">
+            LT128
+            <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i>
+        </button>
+        <div id="dropdownLote" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-3xl shadow-2xl w-40 overflow-hidden border border-gray-50">
+            <ul class="py-2 text-sm font-bold">
+                <li class="px-5 py-3 hover:bg-gray-50 text-gray-400">LOT127</li>
+                <li class="px-5 py-3 bg-pwa-purple text-white">LT128</li>
+                <li class="px-5 py-3 hover:bg-gray-50 text-gray-400">LOT129</li>
+            </ul>
+        </div>
+
+        <button id="userBtn" data-dropdown-toggle="dropdownUser" class=" flex items-center justify-center" aria-label="Información del usuario">
+            <i class="fa-solid fa-user-circle text-4xl color-purple"></i>
+        </button>
+        <div id="dropdownUser" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-[2.5rem] shadow-2xl w-60 p-2 border border-gray-50">
+            <ul class="py-3 text-sm ">
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#">Datos personales</a>
+                </li>
+                <li class="px-6 py-3 hover:bg-gray-50 rounded-2xl">
+                    <a href="#">Cambiar contraseña</a>
+                </li>
+                <li class="px-6 py-3 text-red-500 mt-2 border-t border-gray-100 pt-4 rounded-b-2xl">Cerrar sesión</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="p-4 space-y-4 max-w-md mx-auto pt-[30px]">
+    
+    <div class="px-2 mb-6">
+        <h1 class="text-2xl font-black text-gray-900">Lote LT128</h1>
+        <div class="flex row start mt-2">
+            <button class="bg-pwa-purple text-white py-1 px-4 rounded-[4rem] font-semibold tracking-wider mr-5">Liquidaciones <i class="fa-solid fa-arrow-right"></i> </button>
+            <button class="bg-pwa-purple text-white py-1 px-4 rounded-[4rem] font-semibold tracking-wider">Pagos <i class="fa-solid fa-arrow-right"></i> </button>
+        </div> 
+    </div>
+
+  <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500">
+        
+        <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden mb-4">
+            <h2 id="accordion-flush-heading-1">
+                <button type="button" class="flex items-center justify-between w-full p-6 font-bold text-left border-none" data-accordion-target="#accordion-flush-body-1" aria-expanded="false" aria-controls="accordion-flush-body-1">
+                    <span class="text-lg">Propietaria</span>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                <form class="p-6 pt-0 space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col">
+                            <label class="text-[9px] font-black uppercase text-gray-400 mb-1 ml-1">Nombre/s</label>
+                            <input type="text" value="Carmen" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-[9px] font-black uppercase text-gray-400 mb-1 ml-1">Apellido</label>
+                            <input type="text" value="Solana" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-[9px] font-black uppercase text-gray-400 mb-1 ml-1">DNI</label>
+                        <input type="text" value="28.XXX.XXX" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col">
+                            <label class="text-[9px] font-black uppercase text-gray-400 mb-1 ml-1">Celular</label>
+                            <input type="text" value="1123452345" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-[9px] font-black uppercase text-gray-400 mb-1 ml-1">Email</label>
+                            <input type="text" value="csolana@gmai.com" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                
+                    <button type="submit" class="bg-pwa-purple text-white py-2 px-4 rounded-[100px]  font-semibold  tracking-widest mt-2">
+                        Actualizar <i class="fa-solid fa-check"></i>
+                    </button>
+
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden mb-4">
+            <h2 id="accordion-flush-heading-2">
+                <button type="button" class="flex items-center justify-between w-full p-6 font-bold text-left border-none" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">Grupo familiar</span>
+                        <span class="bg-gray-100 text-[10px] px-2.5 py-1 rounded-full text-gray-400 font-black">4</span>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                <div class="p-6 pt-0 space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl">
+                        <div>
+                            <p class="font-bold text-sm">Jaime Gonzalez</p>
+                            <p class="text-[9px] text-gray-400 font-black uppercase">Hijo/a • No Conviviente</p>
+                        </div>
+                        <button class="text-pwa-purple text-[10px] font-black uppercase">Editar</button>
+                    </div>
+                    <button data-modal-target="modal-familiar" data-modal-toggle="modal-familiar" class="w-full border-2 border-dashed border-gray-100 py-5 rounded-[1.5rem] text-[10px] font-black uppercase text-gray-300">
+                        Agregar familiar +
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden mb-4">
+            <h2 id="accordion-flush-heading-3">
+                <button type="button" class="flex items-center justify-between w-full p-6 font-bold text-left border-none" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">Vehículos</span>
+                        <span class="bg-gray-100 text-[10px] px-2.5 py-1 rounded-full text-gray-400 font-black">2</span>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                <div class="p-6 pt-0 space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl text-sm font-bold">
+                        <div>
+                            <p>Jeep Compass</p>
+                            <p class="text-[9px] text-gray-400 font-black uppercase">AA234EL • Negro</p>
+                        </div>
+                        <button class="text-pwa-purple text-[10px] font-black uppercase">Editar</button>
+                    </div>
+                    <button data-modal-target="modal-vehiculo" data-modal-toggle="modal-vehiculo"class="w-full border-2 border-dashed border-gray-100 py-5 rounded-[1.5rem] text-[10px] font-black uppercase text-gray-300">
+                        Agregar vehículo +
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden mb-4">
+            <h2 id="accordion-flush-heading-3">
+                <button type="button" class="flex items-center justify-between w-full p-6 font-bold text-left border-none" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">Mascotas</span>
+                        <span class="bg-gray-100 text-[10px] px-2.5 py-1 rounded-full text-gray-400 font-black">2</span>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                <div class="p-6 pt-0 space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl text-sm font-bold">
+                        <div>
+                            <p>Pelusa</p>
+                            <p class="text-[9px] text-gray-400 font-black uppercase">Gato • Negro</p>
+                        </div>
+                        <button class="text-pwa-purple text-[10px] font-black uppercase">Editar</button>
+                    </div>
+                    <button data-modal-target="modal-mascota" data-modal-toggle="modal-mascota" class="w-full border-2 border-dashed border-gray-100 py-5 rounded-[1.5rem] text-[10px] font-black uppercase text-gray-300">
+                        Agregar mascota +
+                    </button>
+                </div>
+            </div>
+        </div>
+
+         <div class="bg-white rounded-[2.5rem] card-shadow overflow-hidden mb-4">
+            <h2 id="accordion-flush-heading-5">
+                <button type="button" class="flex items-center justify-between w-full p-6 font-bold text-left border-none" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                    <div class="flex items-center gap-3">
+                        <span class="text-lg">Visitas frecuentes</span>
+                        <span class="bg-gray-100 text-[10px] px-2.5 py-1 rounded-full text-gray-400 font-black">6</span>
+                    </div>
+                    <i data-accordion-icon class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                <div class="p-6 pt-0 space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-gray-50 rounded-2xl">
+                        <div>
+                            <p class="font-bold text-sm">Jaime Gonzalez</p>
+                            <p class="text-[9px] text-gray-400 font-black uppercase">Hermano</p>
+                        </div>
+                        <button class="text-pwa-purple text-[10px] font-black uppercase">Editar</button>
+                    </div>
+                    <button data-modal-target="modal-familiar" data-modal-toggle="modal-visitas" class="w-full border-2 border-dashed border-gray-100 py-5 rounded-[1.5rem] text-[10px] font-black uppercase text-gray-300">
+                        Agregar familiar +
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+
+      <nav class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md border-t border-gray-100 h-24 px-4 flex justify-between items-center z-50">
+        
+        <button class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Novedades">
+            <i class="fa-solid fa-newspaper text-2xl"></i>
+        </button>
+
+        <button onclick="navigateTo('mi_unidad.html')" class="flex flex-col items-center justify-center w-full text-pwa-purple" aria-label="Ir a Mi Unidad">
+            <i class="fa-solid fa-house-user text-2xl"></i>
+        </button>
+
+        <button onclick="navigateTo('mis_reservas.html')"class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Mis Reservas">
+            <i class="fa-solid fa-calendar text-2xl"></i>
+        </button>
+
+        <button  onclick="navigateTo('comunicaciones.html')"class="flex flex-col items-center justify-center w-full text-gray-300" aria-label="Ir a Comunicaciones">
+            <i class="fa-solid fa-mailbox text-2xl"></i>
+        </button>
+
+        <button id="moreBtn" data-dropdown-toggle="dropdownMore" class="flex flex-col items-center justify-center w-full text-gray-300"  aria-label="Ver más opciones">
+            <i class="fa-solid fa-circle-ellipsis text-2xl"></i>
+        </button>
+
+        <div id="dropdownMore" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-[3rem] shadow-2xl w-64 mb-8 border border-gray-50 p-3">
+            <ul class="py-4 text-sm font-bold text-gray-700">
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="votaciones.html" aria-label="Votaciones">Votaciones</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="reclamos.html" aria-label="Reclamos">Reclamos</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl border-t border-gray-50 mt-2 pt-4">
+                    <a href="documentacion.html" aria-label="Documentación">Documentación</a>
+                </li>
+                <li class="px-8 py-4 hover:bg-gray-50 rounded-2xl">
+                    <a href="faqs.html"  aria-label="Preguntas frecuentas">Preguntas frecuentes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+
+
+    <!-- modales -->
+
+    <div id="modal-familiar" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[60] justify-center items-center w-full md:inset-0 h-full max-h-full bg-black/50 backdrop-blur-sm">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-[3rem] shadow p-8">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900">Agregar familiar</h3>
+                <button type="button" class="text-gray-400 text-xl" data-modal-hide="modal-familiar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="space-y-4">
+                <select class="w-full bg-gray-50 border-none rounded-2xl p-4 text-sm  text-gray-400">
+                    <option>Parentesco</option>
+                    <option>Cónyuge</option>
+                    <option>Hijo/a</option>
+                </select>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nombre/s" class="bg-gray-50 border-none rounded-2xl p-4 text-sm">
+                    <input type="text" placeholder="Apellido" class="bg-gray-50 border-none rounded-2xl p-4 text-sm ">
+                </div>
+                 <div class="grid grid-cols-2 gap-4">
+                     <input type="text" placeholder="DNI" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-sm">
+                    <input type="date" placeholder="Nacimiento" class="bg-gray-50 border-none rounded-2xl p-4 text-sm">
+                </div>
+                
+                 <div class="grid grid-cols-2 gap-4">
+                     <input type="text" placeholder="Celular" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-sm">
+                    <input type="email" placeholder="Email" class="bg-gray-50 border-none rounded-2xl p-4 text-sm">
+                </div>
+               
+               <button type="submit" class="w-full bg-pwa-purple text-white py-5 rounded-[2rem] font-black text-lg shadow-xl shadow-purple-100 mt-4 flex items-center justify-center gap-3 active:scale-95 transition-transform">
+                    Actualizar <i class="fa-solid fa-check text-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <div id="modal-vehiculo" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[60] justify-center items-center w-full md:inset-0 h-full max-h-full bg-black/50 backdrop-blur-sm">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-[3rem] shadow p-8">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-black text-gray-900">Agregar vehículo</h3>
+                <button type="button" class="text-gray-400 text-xl" data-modal-hide="modal-familiar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="Marca" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                    <input type="text" placeholder="Modelo" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="Patente" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                    <input type="text" placeholder="Color" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                </div>
+                
+               
+               <button type="submit" class="w-full bg-pwa-purple text-white py-5 rounded-[2rem] font-black text-lg shadow-xl shadow-purple-100 mt-4 flex items-center justify-center gap-3 active:scale-95 transition-transform">
+                    Actualizar <i class="fa-solid fa-check text-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div id="modal-mascota" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[60] justify-center items-center w-full md:inset-0 h-full max-h-full bg-black/50 backdrop-blur-sm">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-[3rem] shadow p-8">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-black text-gray-900">Agregar vehículo</h3>
+                <button type="button" class="text-gray-400 text-xl" data-modal-hide="modal-familiar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="Nombre" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                    <input type="text" placeholder="Animal" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="Color" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                    <input type="text" placeholder="Vacunas" class="bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold">
+                </div>
+                
+               
+               <button type="submit" class="w-full bg-pwa-purple text-white py-5 rounded-[2rem] font-black text-lg shadow-xl shadow-purple-100 mt-4 flex items-center justify-center gap-3 active:scale-95 transition-transform">
+                    Actualizar <i class="fa-solid fa-check text-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Dispara la entrada suave apenas carga el DOM
+        setTimeout(() => {
+            document.body.classList.add("page-loaded");
+        }, 50); // Un delay mínimo para asegurar que el renderizado empezó
+    });
+
+    // Función universal para salir de la página con suavidad
+    function navigateTo(url) {
+        document.body.classList.remove("page-loaded");
+        document.body.style.opacity = "0";
+        document.body.style.transform = "translateY(-10px)";
+        
+        setTimeout(() => {
+            window.location.href = url;
+        }, 500); // 500ms coincide con el tiempo de la transición CSS
+    }
+</script>
+</body>
+</html>
