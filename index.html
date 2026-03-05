@@ -185,6 +185,11 @@
 
 
     <script>
+
+        
+ if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log("Estás usando la app en modo nativo (standalone)");
+     
     document.addEventListener("DOMContentLoaded", () => {
         // Dispara la entrada suave apenas carga el DOM
         setTimeout(() => {
@@ -203,8 +208,6 @@
         }, 500); // 500ms coincide con el tiempo de la transición CSS
     }
 
- if (window.matchMedia('(display-mode: standalone)').matches) {
-    console.log("Estás usando la app en modo nativo (standalone)");
 
 
 
@@ -215,4 +218,5 @@
 </body>
 
 </html>
+
 
