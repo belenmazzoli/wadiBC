@@ -47,7 +47,7 @@ body {
 }
 
 .bg-ticket {
-    background-image: url(ticket-bg.svg);
+    background-image: url(ticket-bg-long.svg);
     background-repeat: no-repeat;
     /*background-size: cover;*/
     background-position:bottom;
@@ -108,3 +108,4 @@ body {
         box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.1);
 
     }
+
