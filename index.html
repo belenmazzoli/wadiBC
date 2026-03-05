@@ -15,6 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
@@ -199,9 +202,17 @@
             window.location.href = url;
         }, 500); // 500ms coincide con el tiempo de la transición CSS
     }
+
+ if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log("Estás usando la app en modo nativo (standalone)");
+
+
+
+        
 </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
+
