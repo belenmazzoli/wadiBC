@@ -50,6 +50,7 @@ body {
     background-image: url(ticket-bg.svg);
     background-repeat: no-repeat;
     /*background-size: cover;*/
+    background-position:bottom;
 }
 .pt-header-gap {
     padding-top: 30px;
@@ -105,4 +106,5 @@ body {
         background-color: #FFFFFF;
         border: 2.5px solid #A855F7;
         box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.1);
+
     }
